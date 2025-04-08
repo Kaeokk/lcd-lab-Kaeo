@@ -1,0 +1,33 @@
+void reactionGame() {
+  lcd.clear();    // Clear the LCD screen
+  lcd.print(???); // Inform the player to get ready
+
+  // Generate a random delay between 3 to 6 seconds (3000-6000 ms) ...
+  // Use the function random(); to help achieve that. Look it up how it works.
+  // !!! ENTER THE CODE HERE !!!
+
+  lcd.clear();                 
+  lcd.print(???);  // Ask the player to press the button as fast as possible
+
+  unsigned long startTime = millis();  // Record the time right button press
+
+  // Don’t worry about how this works, only that the code below waits until ...
+  // the player presses the button.
+  while (digitalRead(buttonPin) == HIGH) {
+    // This keeps running until the player reacts and presses the button
+  }
+
+  // Use the start time recorded above (startTime) and the current time to ...
+  // calculate how long the player took to press the button.
+  unsigned long reactionTime = ???
+
+  // Display the reaction time on the LCD
+  lcd.clear();
+  lcd.print("Your time:");
+  lcd.setCursor(0, 1);         // Move to the second row
+  lcd.print(reactionTime);     // Show the reaction time in milliseconds
+  lcd.print(" ms");
+
+  delay(3000);  // Keep the result displayed for 3 seconds before restarting
+}
+
